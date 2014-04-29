@@ -52,5 +52,9 @@ $ curl -XGET 'http://localhost:9200/global/name/1'
 6. Confrim search works with chinese terms
 
 ```
-$ curl -XGET 'http://localhost:9200/global/_search?q=user:文'
+$ curl -XGET 'http://localhost:9200/global/_search?q=name:文'
+```
+or
+```
+$ curl -XGET 'http://localhost:9200/global/_search?q=message:文'
 ```
