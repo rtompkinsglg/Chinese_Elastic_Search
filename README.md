@@ -37,7 +37,7 @@ $ curl -XPUT 'http://localhost:9200/chineseIndex/' -d '
 
 4. Insert Test Data into your chinese index
 ```
-$ curl -XPUT 'http://localhost:9200/global/name/1' -d '{
+$ curl -XPUT 'http://localhost:9200/chineseIndex/name/1' -d '{
     "name" : "中文",
     "message" : "this is a chinese record with a name of 中文"
 }'
@@ -46,15 +46,15 @@ $ curl -XPUT 'http://localhost:9200/global/name/1' -d '{
 5. Confirm your data was imported 
 
 ```
-$ curl -XGET 'http://localhost:9200/global/name/1'
+$ curl -XGET 'http://localhost:9200/chineseIndex/name/1'
 ```
 
 6. Confrim search works with chinese terms
 
 ```
-$ curl -XGET 'http://localhost:9200/global/_search?q=name:文'
+$ curl -XGET 'http://localhost:9200/chineseIndex/_search?q=name:文'
 ```
 or
 ```
-$ curl -XGET 'http://localhost:9200/global/_search?q=message:文'
+$ curl -XGET 'http://localhost:9200/chineseIndex/_search?q=message:文'
 ```
