@@ -58,3 +58,28 @@ or
 ```
 $ curl -XGET 'http://localhost:9200/chineseIndex/_search?q=message:文'
 ```
+
+
+Some Additional Information of Use
+1. Finding a Chinese/Japanese character in javascript text
+```
+if (chinese.match(/[\u3400-\u9FBF]/))
+{
+  console.log('True');
+}
+else
+{
+console.log('False'); 
+}
+```
+
+2. Generate all Chinese Characters in this range
+```
+var chinese = '\u3400';
+for(var i=0x3400; i < 0x9FBF; i++)
+{
+  chinese = String.fromCharCode(i);
+  console.log(chinese);
+
+}
+```
